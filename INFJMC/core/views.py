@@ -10,11 +10,11 @@ from django.http import HttpResponse
 def home(Request):
 
 
-    html = "<h1>INFJMC</h1> \n <hr> </hr> \n <p> Bienvenido a la página de la Facultad de Ingeniería de la Universidad Nacional de Ingeniería. </p> \n"
-    Menu = "<ul> <li><a href='{ % url 'docentes' %}'>DOCENTES</a></li> <li><a href='{ % url 'carreras' %}'>Carreras</a></li> </ul>"
-    contenido = "<hr><p>lorem</p>"
-    return HttpResponse(html + Menu + contenido)
-
+    #html = "<h1>INFJMC</h1> \n <hr> </hr> \n <p> Bienvenido a la página de la Facultad de Ingeniería de la Universidad Nacional de Ingeniería. </p> \n"
+    #Menu = "<ul> <li><a href='{ % url 'docentes' %}'>DOCENTES</a></li> <li><a href='{ % url 'carreras' %}'>Carreras</a></li> </ul>"
+    #contenido = "<hr><p>lorem</p>"
+    #return HttpResponse(html + Menu + contenido)
+    return render(Request, "core/home.html")
 def carreras(Request):
     return HttpResponse("<h1>Carreras.</h1>")
 
